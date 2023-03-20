@@ -61,7 +61,7 @@ jobs:
             Library-build-
             Library-
 
-      - uses: webbertakken/unity-builder@v2.2.0
+      - uses: webbertakken/unity-builder@v2
         with:
           targetPlatform: WebGL
 
