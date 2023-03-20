@@ -1,10 +1,6 @@
 name: Build And Deploy 🙏
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - production
+on: push
 
 
 env:
@@ -74,7 +70,6 @@ jobs:
     needs: buildWebGL
     name: Upload production to Itch
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/production'
     strategy:
       matrix:
         template: [WebGL]
